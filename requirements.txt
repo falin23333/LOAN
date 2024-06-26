@@ -1,11 +1,17 @@
-streamlit_lottie
-seaborn
 
-xgboost
-pandas
-plotly
-numpy==1.21.0
+
+
+
 scipy==1.7.0
 scikit-learn==0.24.2
 joblib==1.0.1
 threadpoolctl==2.1.0
+
+
+streamlit_lottie==0.0.5
+seaborn==0.13.2
+xgboost==2.1.0
+pandas==2.2.2
+plotly==5.22.0
+numpy==1.23.0
+scipy==1.10.1
