@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+from joblib import load
 import pickle
 import requests
 #from streamlit_lottie import st_lottie
@@ -121,10 +121,10 @@ with st.container():
         user_input = {}
         user_input.update(num_input)
         user_input.update(cat_input)
-
+        model = load("pipeline_rf.joblib")
         # Load the model from the file
-        with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
-            model = pickle.load(file)
+        #with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
+        #    model = pickle.load(file)
 
         prediction = model.predict(pd.DataFrame(user_input, index=[0]))
         
