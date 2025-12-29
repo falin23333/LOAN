@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from joblib import load
+
 import pickle
 import requests
 from streamlit_lottie import st_lottie
