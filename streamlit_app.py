@@ -3,7 +3,7 @@ import pandas as pd
 from joblib import load
 import pickle
 import requests
-#from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie
 
 from sklearn.model_selection import train_test_split
 
@@ -70,7 +70,7 @@ with st.container():
         **********************************************
         """)
     with right:
-        
+        pass
         #lottie_url = " https://lottie.host/0caf0142-8476-4755-bef1-4a166b67f6a3/vNFugFbq57.json"
         #lottie_json = load_lottieurl(lottie_url)
         #st_lottie(lottie_json, height=400)
@@ -82,8 +82,6 @@ with st.container():
         #lottie_url = "https://lottie.host/d27c410d-c34e-494c-826b-47d37805e1e1/VkSmAWhA8B.json"
         #lottie_json = load_lottieurl(lottie_url)
         #st_lottie(lottie_json, height=400)
-        
-        pass
 
 df_train = pd.read_csv("dataset.csv")
 df_train1= pd.read_csv("credit_train.csv")
@@ -121,11 +119,11 @@ with st.container():
         user_input = {}
         user_input.update(num_input)
         user_input.update(cat_input)
-        model = load("pipeline_rf.joblib")
+
         # Load the model from the file
         #with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
         #    model = pickle.load(file)
-
+        model = load("pipeline_rf.joblib")
         prediction = model.predict(pd.DataFrame(user_input, index=[0]))
         
         if prediction == 1:
@@ -133,9 +131,8 @@ with st.container():
             st.write(f":red[No paga la deudA]")
         else:
             st.write(f":green[Paga la deuda]")
+
 model = load("pipeline_rf.joblib")
-#with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
-#            model = pickle.load(file)
 
 
 # Agregar un botón para mostrar la visualización de datos
