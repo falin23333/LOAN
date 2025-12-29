@@ -133,9 +133,9 @@ with st.container():
             st.write(f":red[No paga la deudA]")
         else:
             st.write(f":green[Paga la deuda]")
-
-with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
-            model = pickle.load(file)
+model = load("pipeline_rf.joblib")
+#with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
+#            model = pickle.load(file)
 
 
 # Agregar un botón para mostrar la visualización de datos
