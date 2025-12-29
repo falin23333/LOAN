@@ -70,20 +70,17 @@ with st.container():
         **********************************************
         """)
     with right:
-        
-        #lottie_url = " https://lottie.host/0caf0142-8476-4755-bef1-4a166b67f6a3/vNFugFbq57.json"
-        #lottie_json = load_lottieurl(lottie_url)
-        #st_lottie(lottie_json, height=400)
+        lottie_url = " https://lottie.host/0caf0142-8476-4755-bef1-4a166b67f6a3/vNFugFbq57.json"
+        lottie_json = load_lottieurl(lottie_url)
+        st_lottie(lottie_json, height=400)
 
-        #lottie_url = "https://lottie.host/9b1d760a-d152-4817-9a7c-d5dce70d0f96/65tWrCArzp.json"
-        #lottie_json = load_lottieurl(lottie_url)
-        #st_lottie(lottie_json, height=200)
+        lottie_url = "https://lottie.host/9b1d760a-d152-4817-9a7c-d5dce70d0f96/65tWrCArzp.json"
+        lottie_json = load_lottieurl(lottie_url)
+        st_lottie(lottie_json, height=200)
 
-        #lottie_url = "https://lottie.host/d27c410d-c34e-494c-826b-47d37805e1e1/VkSmAWhA8B.json"
-        #lottie_json = load_lottieurl(lottie_url)
-        #st_lottie(lottie_json, height=400)
-        
-        pass
+        lottie_url = "https://lottie.host/d27c410d-c34e-494c-826b-47d37805e1e1/VkSmAWhA8B.json"
+        lottie_json = load_lottieurl(lottie_url)
+        st_lottie(lottie_json, height=400)
 
 df_train = pd.read_csv("dataset.csv")
 df_train1= pd.read_csv("credit_train.csv")
