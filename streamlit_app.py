@@ -123,7 +123,7 @@ with st.container():
         # Load the model from the file
         with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
             model = pickle.load(file)
-        model = load("pipeline_rf.joblib")
+        
         prediction = model.predict(pd.DataFrame(user_input, index=[0]))
         
         if prediction == 1:
