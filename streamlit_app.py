@@ -3,7 +3,7 @@ import pandas as pd
 
 import pickle
 import requests
-from streamlit_lottie import st_lottie
+#from streamlit_lottie import st_lottie
 
 from sklearn.model_selection import train_test_split
 
