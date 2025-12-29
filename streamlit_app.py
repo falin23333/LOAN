@@ -121,8 +121,8 @@ with st.container():
         user_input.update(cat_input)
 
         # Load the model from the file
-        #with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
-        #    model = pickle.load(file)
+        with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
+            model = pickle.load(file)
         model = load("pipeline_rf.joblib")
         prediction = model.predict(pd.DataFrame(user_input, index=[0]))
         
@@ -132,7 +132,8 @@ with st.container():
         else:
             st.write(f":green[Paga la deuda]")
 
-model = load("pipeline_rf.joblib")
+with open('models/pipeline_AdaBoost.pkl', 'rb') as file:
+    model = pickle.load(file)
 
 
 # Agregar un botón para mostrar la visualización de datos
